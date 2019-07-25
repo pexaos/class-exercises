@@ -1,0 +1,41 @@
+javascript
+
+function that reverse any word or sentence
+
+const str = "hello, bottega"
+
+str.split('').reverse().join('')
+
+
+or 
+
+function reverseWord (sentence) {
+  return sentence.split(' ').map(function(word) {
+    return word.split('').reverse().join('');
+  }).join(' ');
+}
+
+console.log(reverseWord("hello, bottega"));
+
+
+or
+
+
+function reverseString(str) {
+  var splitString = str.split("");
+  var reverseArray = splitString.reverse();
+   var joinArray = reverseArray.join("");
+   return joinArray;
+   
+}
+reverseString("Hello, Bottega");
+
+
+
+
+
+
+
+
+
+

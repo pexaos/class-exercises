@@ -1,0 +1,21 @@
+return wether a number is even or odd in javascript
+
+
+function isEven(value){
+  if (value%2 == 0)
+     return true;
+    else
+        return false;
+}
+console.log(isEven(10));
+
+
+
+takes any number abd coverts each digit into a 1 or 0 in javascript
+
+
+function isOdd(num) { return num % 2;}
+console.log("1 is " + isOdd(1));
+console.log("2 is " + isOdd(2));
+console.log("3 is " + isOdd(3));
+console.log("4 is " + isOdd(4));

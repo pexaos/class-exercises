@@ -1,0 +1,13 @@
+return a randon hex color code
+
+
+javascript
+
+
+Math.random().toString(16).slice(2, 8).toUpperCase();
+
+
+
+
+
+return any sentence in a frame of #'s

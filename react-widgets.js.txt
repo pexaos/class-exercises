@@ -1,0 +1,62 @@
+react widgets
+
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+<body>
+  
+  <button id = "addBtn">Add</button>
+  <button id = "subBtn">Subtract</button>
+  <div>
+    <h1 id = "count">0</h1>
+  </div>
+  <hr>
+  
+  <button id = "toggleBtn">Show</button>
+  <div id="mainHeading" class="hidden">
+    <h1>Peek-a-Boo</h1>
+  </div>
+  <hr>
+  <button id = "greetingBtn">Toggle</button>
+  <div class="toggle">
+    <h1 id = greetingHeading>Hello</h1>
+  </div>
+  <hr>
+</body>
+<script>
+  const add = document.getElementById('addBtn');
+  const sub = document.getElementById('subBtn');
+  const count = document.getElementById('count')
+  currentNumber = 0
+ 
+  add.addEventListener('click', () => {
+    count.innerHTML = Number(count.innerHTML) + 1;
+  });
+  sub.addEventListener('click', () => {
+    count.innerHTML = Number(count.innerHTML) - 1;
+  });
+  
+  
+  const heading = document.getElementById('mainHeading');
+  const btn = document.getElementById('toggleBtn');
+  btn.addEventListener('click', (e) => {
+    heading.classList.toggle('hidden');
+  });
+  const otherHeading = document.getElementById('greetingHeading');
+  const otherbtn = document.getElementById('greetingBtn');
+    otherbtn.addEventListener('click', (e) => {
+    otherHeading.classList.toggle('toggle');
+    otherHeading.innerHTML = "Goodbye"
+  });  
+ 
+</script>
+</html>

@@ -1,0 +1,64 @@
+chasing api with hooks
+
+
+index.js
+
+
+import React from "react";
+import ReactDOM from "react-dom";
+import Planets from "./Stars";
+
+import "./styles.css";
+
+function App() {
+  return (
+    <div className="App">
+      <div className="star">
+        <h1>STAR WARS</h1>
+      </div>
+
+      <Planets />
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+
+
+
+//stars page
+
+stars.js
+import React, { useState, useEffect } from "react";
+
+const Stars = () => {
+  const [hasError, setErrors] = useState(false);
+  const [Stars, setStars] = useState({});
+
+  async function fetchData() {
+    const res = await fetch("https://swapi.co/api/people/");
+    res
+      .json()
+      .then(res => setStars(res))
+      .catch(err => setErrors(err));
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <span>{JSON.stringify(Stars)}</span>
+      <hr />
+      <span>Has error: {JSON.stringify(hasError)}</span>
+    </div>
+  );
+};
+export default Stars;
+
+
+
+
